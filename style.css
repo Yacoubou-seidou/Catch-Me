@@ -1,0 +1,131 @@
+/* body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
+  background: yellow;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+h1 {
+  width: 100%;
+}
+.game {
+  min-width: 80%;
+  min-height: 60%;
+}
+.cachette {
+  background: url(/cloud.png) bottom/cover no-repeat;
+  min-width: 300px;
+  min-height: 150px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.premier {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40%;
+}
+.deuxieme {
+  padding-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40%;
+}
+.kakashi {
+  cursor: pointer;
+  background: url(/Kakashi.png) bottom/cover no-repeat;
+  width: 100px;
+  height: 100px;
+  z-index: -2;
+  transform: translateY(22%);
+  display: none;
+  margin-bottom: 40px;
+} */
+
+nouvelle Method html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Amatic SC", cursive;
+  background-color: wheat;
+}
+
+h1 {
+  text-align: center;
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 10px;
+  color: blue;
+}
+
+.score {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0 3rem;
+  line-height: 1;
+  border-radius: 1rem;
+}
+
+.game {
+  width: 800px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.cachette {
+  flex: 1 0 25%;
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+}
+
+.cachette:after {
+  display: block;
+  background: url(cloud.png) bottom center no-repeat;
+  background-size: cover;
+  content: "";
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  z-index: 2;
+  bottom: -30px;
+}
+
+.kakashi {
+  background: url("Kakashi.png") bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.cachette.up .kakashi {
+  top: 0;
+}
+.btn {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  padding: 10px;
+}
